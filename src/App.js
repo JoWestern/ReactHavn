@@ -1,25 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import react, {Suspense} from "react";
 
-function App() {
+import {Canvas} from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import styled from "styled-components";
+
+import Box from "./components/Box";
+import AnimatedSphere from './components/AnimatedSphere';
+
+
+
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='title'>
+        <h1>Dette er min kube</h1>
+      </div>
+        <Canvas class="canvas" height={1000}>
+          <OrbitControls enableZoom={false} />
+          <ambientLight intensity={0.5} />
+          <directionalLight position={[-2, 5, 2]} intensity={1} />
+          <Suspense fallback={null}>
+          <Box />
+          </Suspense>
+        </Canvas>
+         <Canvas class="canvas" height={1000}>
+          <OrbitControls enableZoom={false} />
+          <ambientLight intensity={0.5} />
+          <directionalLight position={[-2, 5, 2]} intensity={1} />
+          <Suspense fallback={null}>
+          <AnimatedSphere />
+          </Suspense>
+        </Canvas>
     </div>
   );
 }
-
-export default App;
