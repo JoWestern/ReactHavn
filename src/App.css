@@ -10,7 +10,7 @@
   position: relative;
   height: 100vh;
   text-align: center;
-  background: #1f1144;
+  background: #4682B4;
 }
 
 .title {
@@ -21,4 +21,9 @@
 .canvas {
   position: inherit;
   height: 50%;
+}
+
+.section {
+  position: inherit;
+  height: 100vh
 }
