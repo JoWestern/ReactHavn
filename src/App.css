@@ -5,12 +5,14 @@
   align-items: center;
   background: #1f1144;
 } */
+body {
+  background: #4682B4;
+}
 
 .App {
   position: relative;
   height: 100vh;
   text-align: center;
-  background: #4682B4;
 }
 
 .title {
@@ -20,7 +22,7 @@
 
 .canvas {
   position: inherit;
-  height: 50%;
+  height: 100%;
 }
 
 .section {

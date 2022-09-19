@@ -10,10 +10,10 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Port(props) {
-  const { nodes, materials } = useGLTF("/havn.gltf");
+  const { nodes, materials } = useGLTF("/port/havn.gltf");
   return (
     <group {...props} dispose={null}>
-      <group rotation={[-Math.PI / 2, 0, 0]} scale={0}>
+      <group rotation={[-Math.PI / 2, 0, 0]} scale={0.0008}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group
             position={[1171.39, 1513.73, 398.29]}
@@ -24281,6 +24281,6 @@ export function Port(props) {
   );
 }
 
-useGLTF.preload("port/havn.gltf");
+useGLTF.preload("./public/port/havn.gltf");
 
 
